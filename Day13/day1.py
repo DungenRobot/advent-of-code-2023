@@ -1,11 +1,15 @@
 
-
-def generate_map(path: str) -> list[list[str]]:
-    map_out = []
+def generate_maps(path: str) -> list[list[str]]:
+    maps = []
+    current_map = []
     with open(path) as f:
         for line in f.readlines():
-            map_out.append()
-    return map_out
+            if line == '':
+                maps.append(current_map)
+                current_map = []
+            else:
+                current_map.append(line)
+    return maps
 
 
 def main():
