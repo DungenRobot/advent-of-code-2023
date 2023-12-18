@@ -31,7 +31,7 @@ def generate_shape(path: str):
             pos = new
 
 
-def get_num_inside(l):
+def get_area(l):
     area = 0
     for i in range(0, len(l) - 1):
         pi = l[i]
@@ -42,15 +42,13 @@ def get_num_inside(l):
     area += (last[1] * first[0]) - (first[1] * last[0])
     return area // 2
 
-def get_area():
-    interior = get_num_inside(dig_shape)
-    return interior + (boundary // 2) + 1
+def get_num_inside():
+    return get_area(dig_shape) + (boundary // 2) + 1
 
 def main():
-    generate_shape("input.txt")
-    print(get_area())
-    print(get_area() - 952408144115)
+    generate_shape("test.txt")
+    print(get_num_inside())
+    print(get_num_inside() - 952408144115)
 
 if __name__ == "__main__":
     main()
-    
