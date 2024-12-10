@@ -36,7 +36,6 @@ class Ray:
     def get_t_from_x(self, x):
         return (x - self.origin.x) / self.dir.x
 
-
     def collides_with_2D(self, other: Ray): 
         lb = 200000000000000 #lower bound
         ub = 400000000000000 #upper bound

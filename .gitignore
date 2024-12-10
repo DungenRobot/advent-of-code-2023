@@ -156,3 +156,5 @@ cython_debug/
 */test.txt
 **.DS_Store
 
+Day25/input
+Day25/test_input
